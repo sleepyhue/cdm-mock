@@ -1,0 +1,702 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: #1c7743;
+    line-height: 1.6;
+    color: whitesmoke;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    margin-right: 3rem;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: yellow;
+    padding: 2rem;
+    margin-top: 5.3rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.7rem; /* Reduced font size */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+header img {
+    width: 600px;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
+
+/* Sections */
+section {
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: wheat;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+}
+
+/* Mission & Vision */
+.mv-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission, .vision {
+    flex: 1;
+    padding: 2.5rem;
+    background-color: #f5d000;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(255, 255, 0, );
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission::before, .vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.mission h3, .vision h3 {
+    color: black;
+    text-align: center;
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.mission p, .vision p {
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* Programs */
+.institute {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 2rem auto;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.institutes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.institute:hover {
+    transform: scale(1.02);
+}
+
+.institute h3 {
+    color: rgb(8, 75, 8);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.institute img {
+    width: 150px;
+    max-width: 150px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.institute h3::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+}
+
+.institute ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.institute li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: transform 0.2s ease;
+    color: rgb(8, 75, 8);
+    font-size: 1rem;
+}
+
+#map {
+    text-align: center;
+}
+
+#map a {
+    text-decoration: none;
+    display: inline-block; /* Ensures hover effects work properly */
+    background-color: blue;
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#map a:hover {
+    transform: translateY(-3px);
+}
+
+#enroll {
+    text-align: center;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.cta-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#team {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 3px solid rgb(33, 33, 199);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1c7743;
+}
+
+.team-member p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    .mv-container {
+        padding: 0 1rem;
+    }
+    
+    .institute {
+        margin: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: #1c7743;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .mv-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .institute h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .institute {
+        padding: 1.5rem;
+    }
+
+    .mission, .vision {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    margin-right: 2rem;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .menu-btn span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn span:nth-child(1) { top: 0; }
+    .menu-btn span:nth-child(2) { top: 9px; }
+    .menu-btn span:nth-child(3) { top: 18px; }
+
+    .menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+/* Responsive breakpoints */
+/* Large screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+    .mv-container,
+    .institutes-container,
+    .team-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    header p {
+        font-size: 1.8rem;
+    }
+
+    .institute h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop and Laptop (1024px to 1399px) */
+@media screen and (max-width: 1399px) {
+    header img {
+        width: 400px;
+        top: 25%;
+    }
+
+    .mv-container {
+        gap: 2rem;
+    }
+}
+
+/* Tablets and smaller laptops (768px to 1023px) */
+@media screen and (max-width: 1023px) {
+    header {
+        text-align: center;
+        align-items: center;
+    }
+
+    header img {
+        position: static;
+        margin: 2rem auto;
+        width: min(400px, 90%);
+    }
+
+    .institutes-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Tablets and large phones (576px to 767px) */
+@media screen and (max-width: 767px) {
+    nav {
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        width: 80px;
+        margin: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    .mv-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mission, .vision {
+        padding: 1.5rem;
+    }
+
+    .institute {
+        padding: 1.5rem;
+    }
+
+    .institute img {
+        width: 120px;
+    }
+
+    .team-member {
+        padding: 1.5rem;
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Mobile Navigation */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: #1c7743;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        gap: 2rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* Small phones (575px and below) */
+@media screen and (max-width: 575px) {
+    header {
+        padding: 1rem;
+        margin-top: 4rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    header img {
+        width: 90%;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .mission h3, .vision h3 {
+        font-size: 1.5rem;
+    }
+
+    .mission p, .vision p {
+        font-size: 1rem;
+    }
+
+    .institute h3 {
+        font-size: 1.4rem;
+    }
+
+    .institute li {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .team-member {
+        padding: 1rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Portrait orientation adjustments */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    header {
+        min-height: auto;
+        padding: 5rem 1rem 2rem;
+    }
+
+    .nav-links {
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+    }
+}
+
+/* High-density (Retina) displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img,
+    .institute img,
+    .team-member img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
