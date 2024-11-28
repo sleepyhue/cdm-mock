@@ -19,5 +19,6 @@
  function submitLang(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
+    alert("Thank you for your Registration, have a nice day!");
     window.location.href = "index.html";
 }
