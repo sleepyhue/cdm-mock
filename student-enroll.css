@@ -210,7 +210,7 @@ nav {
 /* Mobile Responsive Design */
 @media screen and (max-width: 480px) {
     .registration-container {
-        margin: 100px auto 30px;
+        margin: 125px auto 30px;
         padding: 1rem;
     }
 
