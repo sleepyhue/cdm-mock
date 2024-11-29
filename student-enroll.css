@@ -162,7 +162,7 @@ nav {
     }
 
     .logo img {
-        margin-left: 20px;
+        margin-left: 0.5rem;
     }
 
     .menu-btn {
@@ -193,7 +193,7 @@ nav {
     }
 
     .registration-container {
-        margin: 150px auto 50px;
+        margin: 120px auto 50px;
         width: 95%;
         padding: 1.5rem;
     }
@@ -210,8 +210,12 @@ nav {
 /* Mobile Responsive Design */
 @media screen and (max-width: 480px) {
     .registration-container {
-        margin: 125px auto 30px;
+        margin: 100px auto 30px;
         padding: 1rem;
+    }
+
+    .logo img {
+        margin-top: 0.5rem;
     }
 
     .form-group label {
