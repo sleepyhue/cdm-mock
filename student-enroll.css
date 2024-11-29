@@ -162,7 +162,7 @@ nav {
     }
 
     .logo img {
-        margin-left: 0.5rem;
+        margin-left: 20px;
     }
 
     .menu-btn {
@@ -193,7 +193,7 @@ nav {
     }
 
     .registration-container {
-        margin: 120px auto 50px;
+        margin: 150px auto 50px;
         width: 95%;
         padding: 1.5rem;
     }
