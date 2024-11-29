@@ -157,8 +157,8 @@ nav {
   /* Tablet Responsive Design */
   @media screen and (max-width: 768px) {
     nav {
-        padding: 1rem;
-        position: fixed;
+        padding: 0.5rem;
+        position: absolute;
     }
 
     .logo img {
